@@ -1,63 +1,131 @@
 *{
     font-family: "IBM Plex Serif", serif;
+
 }
-#logo{
-    border-radius: 40%;
-    height: 150px;
-    left: 0%;
-    justify-content: flex-start;
-    border-color:#13b4f5;
-    border-width: 8px;
-    border-style:solid;
-}
-header{
+
+header {
     background-image: url(/resources/resort.jpg);
-    background-size:cover;
+    background-size: cover;
     background-position: 0%;
     min-height: min-content;
     height: 900px;
     max-width: 100%;
+    text-align: center;
 }
-
-nav{
+nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height:max-content;
     flex-wrap: wrap;
+    width: 100%;
     align-items: center;
+    text-align: center;
+    background-color: white;
 }
-nav p {
-   flex-grow: 2;
-    display: flex;
-    justify-content: space-around;
-    color: #00683c;
-    font-size: 20px;
-    background-color:#13b4f5;
-    border-radius: 30px;
-    min-width: 35px;
-    min-height: 25px;
+
+#logo{
+    position: relative;
+    border-radius: 50%;
     height: 75px;
-    align-items: center;
+    width: fit-content;
+    border-color:#13b4f5;
+    border-width: 5px;
+    border-style:solid;
+}
+
+
+nav a {
+    color:#13b4f5;
+    justify-content: space-around;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 30px;
+    text-align: center;
+    align-self: center;
+    width: 200px;
+    font-weight: 300;
+    cursor: pointer;
+}
+nav a:hover{
+    color: color-mix(in srgb, #13b4f5 30%, black 40%);
+    text-decoration: underline;
+}
+
+#presentacion{
+    position: relative;
+    top: 150px;
+}
+.carrusel {
+    position: relative;
+    width: 600px;
+    max-width: 800px;
+    margin: auto;
     overflow: hidden;
 }
-nav p a{
-    border-radius: 10px;
-    text-align: center;
-    align-content: center;
-    background-color:white;
+.contenedor-imagenes {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 14px;
+    box-shadow: 0 0 25px rgba(0, 180, 190, 0.20),
+        0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.imagen {
+    width: 100%;
     height: 100%;
-    width: 400px;
-    font-weight: 600;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+-webkit-mask-image:
+        linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%),
+        linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%);
+
+    -webkit-mask-composite: source-in;
+
+    mask-image:
+        linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%),
+        linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%);
+
+    mask-composite: intersect;
 }
-nav p:hover{
+.imagen.activa {
+    opacity: 1;
+}
+
+.flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
     cursor: pointer;
-    background-color: aqua
-    
+    font-size: 24px;
 }
-nav p a:hover{
-    color: maroon;
+
+.anterior {
+    left: 10px;
+    opacity: 0.4;
 }
+
+.siguiente {
+    right: 10px;
+    opacity: 0.4;
+}
+
+.flecha:hover {
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0.8;
+}
+
 
 header h3 {
    font-size: 50px;
