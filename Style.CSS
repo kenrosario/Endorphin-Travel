@@ -11,6 +11,9 @@ header {
     height: 900px;
     max-width: 100%;
     text-align: center;
+    border-radius: 100px;
+    margin: 0;
+    padding: 0;
 }
 nav {
     display: flex;
@@ -53,7 +56,20 @@ nav a:hover{
 
 #presentacion{
     position: relative;
-    top: 150px;
+    color: color-mix(in srgb, #13b4f5 30%, black 40%);
+
+}
+
+#presentacion h1{
+    font-family: "Lobster", sans-serif;
+    font-size: 70px;
+        font-weight: 300;
+        font-style: normal;
+        color: white;color: color-mix(in srgb, #13b4f5 30%, black 40%);
+}
+#presentacion p{
+    position: relative;
+    top: 60px;
 }
 .carrusel {
     position: relative;
@@ -65,7 +81,7 @@ nav a:hover{
 .contenedor-imagenes {
     position: relative;
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 13 / 13;
     overflow: hidden;
     border-radius: 14px;
     box-shadow: 0 0 25px rgba(0, 180, 190, 0.20),
@@ -92,6 +108,7 @@ nav a:hover{
         linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%);
 
     mask-composite: intersect;
+    border-radius: 100px;
 }
 .imagen.activa {
     opacity: 1;
@@ -166,4 +183,31 @@ header h3 {
 .ilustracion img:hover{
     height: 250px;
     width: 300px;
+}
+body{
+    background-image: url(/resources/palmas.jpg);
+    margin: 0;
+}
+body h1{
+    text-align: center;
+}
+#paquetes{
+display: grid;
+column-gap: 10px;
+row-gap: 50px;
+justify-items: center;
+background-size: cover;
+margin: 0 0;
+padding: 0 0;
+
+}
+#paquetes img{
+    max-height: 400px;
+    max-width: 350px;
+}
+.dispak{
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 500px;
 }
