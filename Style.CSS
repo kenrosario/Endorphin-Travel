@@ -11,65 +11,65 @@ header {
     height: 900px;
     max-width: 100%;
     text-align: center;
-    border-radius: 100px;
-    margin: 0;
-    padding: 0;
 }
 nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-wrap: nowrap;
     width: 100%;
-    align-items: center;
-    text-align: center;
-    background-color: white;
 }
 
 #logo{
-    position: relative;
-    border-radius: 50%;
-    height: 75px;
-    width: fit-content;
-    border-color:#13b4f5;
-    border-width: 5px;
-    border-style:solid;
+    height: 180px;
+}
+#viaje{
+    width: 100px;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.416);
+    color: white;
+    width: 160px;
+    cursor: pointer;
 }
 
 
-nav a {
-    color:#13b4f5;
-    justify-content: space-around;
-    font-size: 20px;
-    text-align: center;
-    border-radius: 30px;
+nav div {
+    position: relative;
+    display: flex;
+    justify-items: space-around;
+    align-items: center;
+    font-size: 18px;
     text-align: center;
     align-self: center;
     width: 200px;
     font-weight: 300;
     cursor: pointer;
+    gap: 110px;
+    width: 850px;
+    text-decoration: none;
+    color: black;
 }
 nav a:hover{
     color: color-mix(in srgb, #13b4f5 30%, black 40%);
     text-decoration: underline;
 }
 
+/*Navegacion de la pagina ↑*/
+
 #presentacion{
     position: relative;
-    color: color-mix(in srgb, #13b4f5 30%, black 40%);
-
+   bottom: 30px;
 }
 
-#presentacion h1{
+#presentacion h2{
     font-family: "Lobster", sans-serif;
-    font-size: 70px;
-        font-weight: 300;
+    font-size: 50px;
+        font-weight: 100;
         font-style: normal;
         color: white;color: color-mix(in srgb, #13b4f5 30%, black 40%);
 }
 #presentacion p{
-    position: relative;
-    top: 60px;
+    font-size: 23px;
 }
 .carrusel {
     position: relative;
@@ -81,22 +81,11 @@ nav a:hover{
 .contenedor-imagenes {
     position: relative;
     width: 100%;
-    aspect-ratio: 13 / 13;
+    aspect-ratio: 16 / 9;
     overflow: hidden;
     border-radius: 14px;
     box-shadow: 0 0 25px rgba(0, 180, 190, 0.20),
         0 10px 30px rgba(0, 0, 0, 0.15);
-}
-
-.imagen {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 0.6s ease;
 -webkit-mask-image:
         linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%),
         linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%);
@@ -108,10 +97,6 @@ nav a:hover{
         linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%);
 
     mask-composite: intersect;
-    border-radius: 100px;
-}
-.imagen.activa {
-    opacity: 1;
 }
 
 .flecha {
@@ -119,7 +104,7 @@ nav a:hover{
     top: 50%;
     transform: translateY(-50%);
     z-index: 2;
-
+    border-radius: 50%;
     background: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
@@ -129,21 +114,122 @@ nav a:hover{
 }
 
 .anterior {
-    left: 10px;
-    opacity: 0.4;
+    left: 0px;
+    opacity: 0.7;
 }
 
 .siguiente {
-    right: 10px;
-    opacity: 0.4;
+    right: 0px;
+    opacity: 0.7;
 }
 
 .flecha:hover {
     background: rgba(0, 0, 0, 0.8);
     opacity: 0.8;
 }
+.hero {
+    position: relative;
+    min-height: 100vh;
+    background-image: url(/resources/resort.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
+    overflow: hidden;
+}
 
+.contenido {
+    position: relative;
+    z-index: 1;
+    padding: 40px 20px 180px;
+}
+
+.curva {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 150px;
+
+    z-index: 2;
+    line-height: 0;
+}
+
+.curva svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.contenedor-imagenes {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+.pista {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease-in-out;
+}
+
+.destino {
+    position: relative;
+    flex: 0 0 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.destino img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Información sobre la imagen */
+.informacion-destino {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 65px 30px 25px;
+    color: white;
+
+    background: linear-gradient(to top,
+            rgba(0, 35, 45, 0.85),
+            rgba(0, 35, 45, 0.45) 60%,
+            transparent);
+}
+
+.ubicacion {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 8px;
+    color: #a5f0f3;
+}
+
+.informacion-destino h4 {
+    font-size: 25px;
+    margin: 0 0 8px;
+    font-weight: 700;
+}
+
+.descripcion {
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.5;
+}
+/*estilo del inicio ↑*/
+#destinosnav{
+    background-image: url(/resources/fondo\ destinos.jpg);
+    background-blend-mode: darken;
+    background-size: cover;
+    height: 900px;
+}
 header h3 {
    font-size: 50px;
    color: #13b4f5;
@@ -185,8 +271,8 @@ header h3 {
     width: 300px;
 }
 body{
-    background-image: url(/resources/palmas.jpg);
     margin: 0;
+    padding: 0;
 }
 body h1{
     text-align: center;
@@ -211,3 +297,4 @@ padding: 0 0;
     grid-template-columns: auto auto;
     column-gap: 500px;
 }
+/*estilo de los destinos ↑*/

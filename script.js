@@ -1,5 +1,5 @@
 
-const imagenes = document.querySelectorAll(".imagen");
+const imagenes = document.querySelectorAll(".destino");
 
 const anterior = document.getElementById("anterior");
 const siguiente = document.getElementById("siguiente");
@@ -7,14 +7,9 @@ const siguiente = document.getElementById("siguiente");
 let indiceActual = 0;
 
 function mostrarImagen(indice) {
-    // Ocultar la imagen actual
-    imagenes[indiceActual].classList.remove("activa");
-
-    // Calcular la nueva posición
     indiceActual = (indice + imagenes.length) % imagenes.length;
 
-    // Mostrar la nueva imagen
-    imagenes[indiceActual].classList.add("activa");
+    pista.style.transform = `translateX(-${indiceActual * 100}%)`;
 }
 
 siguiente.addEventListener("click", function () {
