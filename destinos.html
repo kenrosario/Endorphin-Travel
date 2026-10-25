@@ -18,13 +18,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-
+<script src="https://kit.fontawesome.com/e12e15076b.js" crossorigin="anonymous"></script>
 
 </head>
 <header id="destinosnav">
 <nav>
-    <img src="./resources/Logo pequeño.png" id="logo">
-    <div>
+    <div class="logo-container">
+        <img src="./resources/Logo pequeño.png" id="logo">
+    </div>
+    <div id="opcionesnav">
         <a target="_self" href="/Index.html">Inicio</a>
         <a target="_self" href="/destinos.html">Destinos</a>
         <a target="_self" href="/paquetes.html">Paquetes</a>
@@ -34,10 +36,37 @@
 
     <button id="viaje">✈️ Reserva tu viaje</button>
 </nav>
-<section id="presentacion">
-        <p>——— Agencia de viajes y paquetes turisticos ———</p>
-        <h2>¡Encuentra tu proximo viaje!</h2>
-        <p>Descubre los destinos mas increibles del pais,<br> vive experiencias nuevas y crea recuerdos con nosotros</p>
+<section id="destinos-presentacion">
+        <p>——— Nuestros posibles destinos ———</p>
+        <h2>Organizamos tu viaje privado</h2>
+
+        <div id="destinos-inicio">
+            <section class="di-diseño">
+                <i class="fa-solid fa-hotel"></i>
+                <p>Hoteles</p>
+            </section>
+            <section class="di-diseño">
+                <i class="fa-solid fa-umbrella-beach"></i>
+                <p>Resorts</p>
+            </section>
+            <section class="di-diseño">
+                <i class="fa-solid fa-house-flood-water"></i>
+                <p>Villas</p>
+            </section>
+            <section class="di-diseño">
+                <i class="fa-solid fa-plane-departure"></i>
+                <p>Vuelos</p>
+            </section>
+            <section class="di-diseño">
+                <i class="fa-solid fa-file-contract"></i>
+                <p>Seguro de viajes</p>
+            </section>
+            <section class="di-diseño">
+                <i class="fa-solid fa-ship"></i>
+                <p>Cruseros</p>
+            </section>
+        </div>
+        
 </section>
     <div class="curva">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200" preserveAspectRatio="none">
@@ -48,6 +77,116 @@
     
         </svg>
     </div>
+    
 <body>
   
 </header>
+
+
+
+<section id="destinos-populares">
+    <br>
+    <h1>Destinos populares</h1>
+    <p>Nuestros destinos mas visitados</p>
+     <div id="destinos-elementos">
+
+        <div class="destinos-element">
+
+            <img src="/resources/dorado.jpg" alt="Resort en Punta Cana">
+        
+            <div class=destinos-descripcion>
+                <p class=>📍 El Dorado Water Park</p>
+                <h4>Punta cana</h4>
+                <p class=>
+                    Descubre El Dorado Water Park en Cap Cana, Punta Cana. Toboganes extremos, atracciones familiares, restaurantes y más.
+                </p>
+            </div>
+        </div>
+
+        <div class="destinos-element">
+            <img src="/resources/jarabacoa.jpg" alt="Resort en Punta Cana">
+        
+            <div class=destinos-descripcion>
+                <p class=>📍 Jarabacoa</p>
+                <h4>El pueblo donde siempre es primavera</h4>
+                <p class=>
+                    La ciudad de la eterna primavera. Jarabacoa, ubicada en la provincia La Vega, es uno de los principales destinos de montaña de la República Dominicana.
+                </p>
+            </div>
+        </div>
+
+        <div class="destinos-element">
+            <img src="/resources/los haitises.jpg" alt="Resort en Punta Cana">
+        
+            <div class=destinos-descripcion>
+                <p class=>📍 los Haitises</p>
+                <h4>Parque Nacional los Haitises</h4>
+                <p class=>
+                    Los Haitises (oficialmente Parque Nacional Los Haitises) es una reserva natural y uno de los parques ecológicos más importantes de la República Dominicana.
+                </p>
+            </div>
+        </div>
+
+        <div class="destinos-element">
+            <img src="/resources/isla saona.jpg" alt="Resort en Punta Cana">
+        
+            <div class=destinos-descripcion>
+                <p class=>📍 Isla saona</p>
+                <h4>Paque Nacional Cotubanamá</h4>
+                <p class=>
+                    En la Isla Saona, puedes realizar diversas actividades centradas en la naturaleza, el descanso y la cultura local.
+                </p>
+            </div>
+        </div>
+        <div class="destinos-element">
+            <img src="/resources/paseo de la doña.jpg" alt="Resort en Punta Cana">
+        
+            <div class=destinos-descripcion>
+                <p class=>📍 Paseo de la doña blanca</p>
+                <h4>Puerto Plata</h4>
+                <p class=>
+                    El Paseo de Doña Blanca (también conocido como el "Callejón Rosado" o la "Calle Rosa") es un pintoresco y corto pasaje peatonal ubicado en el centro histórico de la ciudad de Puerto Plata, República Dominicana.
+                </p>
+            </div>
+
+        </div>
+            <div class="destinos-element">
+            <img src="/resources/bahia de las aguilas.jpg" alt="Resort en Punta Cana">
+                
+            <div class=destinos-descripcion>
+                <p class=>📍 Bahia de las Aguilas</p>
+                <h4>Pedernales</h4>
+                <p class=>
+                Reconocida como la playa más hermosa de la República Dominicana, esta franja de arena blanca como el diamante se
+                extiende a lo largo de cinco millas
+                </p>
+                </div>
+                </div>
+
+            <div class="destinos-element">
+                    <img src="/resources/Punta rucia.jpg" alt="Resort en Punta Cana">
+                        
+                    <div class=destinos-descripcion>
+                    <p class=>📍 Punta Rucia</p>
+                    <h4>Puerto Plata</h4>
+                    <p class=>
+                    Punta Rucia es un pintoresco cabo y un paraíso de playas de arena blanca y aguas turquesas, ubicado en la provincia de Puerto Plata, en la costa noroeste de la República Dominicana.
+                    </p>
+                    </div>
+            </div>
+            <div class="destinos-element">
+                <img src="/resources/buggies bayahibe.jpg" alt="Resort en Punta Cana">
+            
+                <div class=destinos-descripcion>
+                    <p class=>📍 Tour en Buggies</p>
+                    <h4>Bayahibe</h4>
+                    <p class=>
+                        Recorre los caminos rurales de Bayahibe en buggy o ATV, según la opción reservada, y conoce los paisajes de los cañaverales y el entorno del río Chavón.
+                    </p>
+                </div>
+            </div>
+
+     </div>
+
+</section>
+</body>
