@@ -300,7 +300,6 @@ nav a:hover{
 }
 .di-diseño{
     flex-direction: column;
-    background-color: white;
     width: 100px;
     border-radius: 40px;
     color: white;
@@ -318,7 +317,6 @@ header h3 {
 
 }
 #destinos-elementos{
-    margin-top: 0%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -368,3 +366,91 @@ body{
 
 
 /*estilo de los destinos ↑*/
+#paquetesnav{
+    background-image: url(/resources/fondo\ paquetes.jpg);
+    height: 800px;
+    position: relative;
+}
+#paquetes-inicio{
+ width: 100%;
+}
+
+#paquetes-inicio h2{
+font-family: "Lobster", sans-serif;
+    font-size: 50px;
+    font-weight: 100;
+    font-style: normal;
+    color: color-mix(in srgb, #13b4f5 30%, black 40%);
+}
+
+#paquetes-servicios{
+  display: flex;
+  flex-direction: row;
+ width: 100%;
+justify-content: space-evenly;
+align-content: center;
+ margin-top: 100px;
+}
+.servicio{
+    border-radius: 40px;
+    width: 110px;
+    height: 8em;
+    background-color: rgba(0, 0, 0, 0.366);
+    color: white;
+}
+#paquetes{
+background-color: rgba(208, 217, 247, 0.442);
+    mask-image:
+        linear-gradient(to top, transparent 0%, black 8%, black 92%, transparent 100%);
+        height: fit-content;
+
+}
+#paquetes h1{
+    text-align: center;
+    font-family: "Tangerine", cursive;
+        font-size: 50px;
+        font-weight: 400;
+    color: color-mix(in srgb, #13b4f5 30%, black 40%);
+    margin-bottom: 50px;
+}
+
+#paquetes-elementos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-evenly;
+    align-content: center;
+    padding-bottom: 50px;
+}
+
+.paquetes-element{
+    height: 250px;
+    width: fit-content;
+    margin-bottom: 90px;
+        box-shadow: 0 0 55px rgba(0, 180, 190, 0.20),
+                0 10px 30px rgba(0, 0, 0, 0.76);
+    border-radius: 15px;
+    
+}
+
+.paquetes-element img:hover{
+
+box-shadow: 0 0 65px rgba(0, 180, 190, 0.363),
+        0 30px 50px rgb(0, 0, 0);
+position: relative;
+        height: 350px;
+        width: auto;
+        flex-grow: 2;
+        z-index: 2;
+}
+
+.paquetes-element img{
+    height: 300px;
+    border-radius: 15px;
+        border-color:#13b4f5;
+            border-width: 5px;
+            border-style:ridge;
+
+    transition: all 0.6s ease-in-out ;
+}
+/*Estilo de los paquetes ↑*/
