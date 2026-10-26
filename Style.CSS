@@ -1,3 +1,4 @@
+/*Navegacion base de las paginas*/
 *{
     font-family: "IBM Plex Serif", serif;
 
@@ -7,7 +8,7 @@ a{
     color: inherit;
 }
 
-header {
+#index-header {
     background-image: url(/resources/resort.jpg);
     background-size: cover;
     background-position: 0%;
@@ -69,7 +70,6 @@ nav a:hover{
 }
 .logo-container {
     position: relative;
-    display: inline-flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
@@ -96,7 +96,10 @@ nav a:hover{
     display: block;
 }
 
-/*Navegacion de la pagina ↑*/
+
+
+/*estilo del inicio ↓*/
+
 
 #presentacion{
     position: relative;
@@ -194,7 +197,7 @@ nav a:hover{
     width: 100%;
     height: 5rem;
     
-    z-index: 2;
+    z-index: 1;
     line-height: 0;
 }
 
@@ -217,19 +220,7 @@ nav a:hover{
     transition: transform 0.6s ease-in-out;
 }
 
-.destino {
-    position: relative;
-    flex: 0 0 100%;
-    height: 100%;
-    overflow: hidden;
-}
 
-.destino img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
 
 /* Información sobre la imagen */
 .informacion-destino {
@@ -265,14 +256,38 @@ nav a:hover{
     margin: 0;
     line-height: 1.5;
 }
-/*estilo del inicio ↑*/
 
-#destinosnav{
+
+
+/*estilo de los destinos ↓*/
+
+
+.destino {
+    position: relative;
+    flex: 0 0 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.destino img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+#destinos-header{
     background-image: url(/resources/fondo.jpg);
     background-blend-mode: darken;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 900px;
+    height: 42rem;
+    max-height: 52rem;
+    background-position: 0%;
+    min-height: min-content;
+    max-width: 100%;
+    text-align: center;
+    position: relative;
 }
 #destinos-presentacion {
     position: relative;
@@ -289,9 +304,9 @@ nav a:hover{
 }
 
 #destinos-inicio {
-    top: 170px;
-    position: relative;
     display: flex;
+    min-height: min-content;
+    margin-top: 100px;
     flex-direction: row;
     font-size: 23px;
     width: 100%;
@@ -365,11 +380,20 @@ body{
 }
 
 
-/*estilo de los destinos ↑*/
-#paquetesnav{
+
+/*Estilo de los paquetes ↓*/
+
+
+
+#paquetes-header{
     background-image: url(/resources/fondo\ paquetes.jpg);
-    height: 800px;
+    height: 52rem;
     position: relative;
+    background-size: cover;
+    background-position: 0%;
+    min-height: min-content;
+    max-width: 100%;
+    text-align: center;
 }
 #paquetes-inicio{
  width: 100%;
@@ -385,11 +409,13 @@ font-family: "Lobster", sans-serif;
 
 #paquetes-servicios{
   display: flex;
+  position: relative;
   flex-direction: row;
  width: 100%;
 justify-content: space-evenly;
 align-content: center;
  margin-top: 100px;
+ z-index: 2;
 }
 .servicio{
     border-radius: 40px;
@@ -453,4 +479,52 @@ position: relative;
 
     transition: all 0.6s ease-in-out ;
 }
-/*Estilo de los paquetes ↑*/
+
+
+/*Estilo de pagina nosotros ↓*/
+
+
+#nosotros-header{
+    background-image: url(/resources/fondo\ nosotros.jpg);
+    height: 800px;
+    background-size: cover;
+    background-position: 0%;
+    min-height: min-content;
+    max-width: 100%;
+    position: relative;
+    
+}
+
+#nosotros-inicio{
+    position: relative;
+    left: 60%;
+    width: fit-content;
+    margin-right: 100px;
+    isolation: isolate;
+    text-align: justify;
+    word-spacing: 3px;
+    
+}
+#nosotros-inicio h2{
+    font-family: "tangerine", cursive;
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    color: color-mix(in srgb, #13b4f5 30%, black 40%);
+}
+#nosotros-inicio::before{
+    content: "";
+        position: absolute;
+        inset: -40px;
+        z-index: -1;
+        pointer-events: none;
+    
+        background: radial-gradient(ellipse at center,
+                rgba(255, 255, 255, 0.98) 0%,
+                rgba(255, 255, 255, 0.90) 40%,
+                rgba(255, 255, 255, 0.60) 65%,
+                rgba(255, 255, 255, 0) 100%);
+}
+#nosotros-intro{
+    text-align: center;
+}
