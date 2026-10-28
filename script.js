@@ -19,3 +19,7 @@ siguiente.addEventListener("click", function () {
 anterior.addEventListener("click", function () {
     mostrarImagen(indiceActual - 1);
 });
+
+document.getElementById("viaje").addEventListener("click", function () {
+    window.open("https://docs.google.com/forms/d/e/1FAIpQLSc2nLWuyj7HEzX77BX48jAdXji1Ds4ORRtCCg0sq1VKBN-zeg/viewform?usp=header", "_blank");
+});

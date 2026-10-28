@@ -281,8 +281,8 @@ nav a:hover{
     background-blend-mode: darken;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 42rem;
-    max-height: 52rem;
+    height: 55rem;
+    min-height: 32rem;
     background-position: 0%;
     min-height: min-content;
     max-width: 100%;
@@ -292,10 +292,15 @@ nav a:hover{
 #destinos-presentacion {
     position: relative;
     bottom: 30px;
+    
+}
+#destinos-intro{
+    margin-left: 70px;
 }
 
 #destinos-presentacion h2 {
     font-family: "Lobster", sans-serif;
+    letter-spacing: 3px;
     font-size: 50px;
     font-weight: 100;
     font-style: normal;
@@ -527,4 +532,107 @@ position: relative;
 }
 #nosotros-intro{
     text-align: center;
+}
+.integrantes{
+ display: flex;
+ height: fit-content;
+ justify-content: space-evenly;
+ text-align: center;
+ background-color: rgba(208, 211, 139, 0.692);
+ padding-top: 100px;
+ padding-bottom: 100px;
+ mask: 
+linear-gradient(to top, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+.integrantes-descripcion h1{
+ text-align: center;
+}
+
+.integrantes img{
+    height: 400px;
+    width: 500px;
+    border-radius: 10%;
+}
+#m-v-v{
+    mask:
+        linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%);
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(193, 196, 118);
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+.valores{
+    text-align: center;
+}
+.fa-solid fa-hands-holding{
+    height: 100px;
+    width: 90px;
+    font-size: 800px;
+}
+.valores h1{
+    font-family: "tangerine", cursive;
+    font-size: 45px;
+    font-weight: 800;
+}
+
+/*Estilo de pagina contacto ↓*/
+
+.contacto-inicio{
+    text-align: center;
+    font-size: 20px;
+}
+#contacto-h3{
+color: color-mix(in srgb, #13b4f5 30%, rgb(0, 0, 0) 20%);
+font-size: 30px;
+text-shadow:
+        -1px -1px 0 #fffcfc,
+        1px -1px 0 #000000,
+        -1px 1px 0 #000000,
+        1px 1px 0 #000000;
+
+}
+#contacto-body{
+    background-image: url(/resources/fondo-contacto.jpg);
+    background-position: 0%;
+    background-size: cover;
+    backdrop-filter: blur(3px);
+    text-align: center;
+}
+
+.contacto{
+    background: rgba(87, 99, 233, 0.163);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: fit-content;
+    margin-top: 20px;
+}
+
+#logos-redes{
+    width: 200px;
+    word-spacing: 20px;
+}
+
+#logos-redes div{
+    font-size: 40px;
+}
+#logos-redes div a:hover{
+    color: #13b4f5;
+}
+
+#contacto-org{
+    display: flex;
+    justify-content: space-around;
+}
+#contacto-direccion{
+    font-weight: 400;
+    width: 100%;
+    text-shadow:
+            -1px -1px 0 #fffcfc,
+            1px -1px 0 #000000,
+            -1px 1px 0 #000000,
+            1px 1px 0 #000000;
 }
