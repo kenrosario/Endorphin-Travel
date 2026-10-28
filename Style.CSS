@@ -9,7 +9,7 @@ a{
 }
 
 #index-header {
-    background-image: url(/resources/resort.jpg);
+    background-image: url(resources/resort.jpg);
     background-size: cover;
     background-position: 0%;
     min-height: min-content;
@@ -175,7 +175,7 @@ nav a:hover{
 .hero {
     position: relative;
     min-height: 100vh;
-    background-image: url(/resources/resort.jpg);
+    background-image: url(resources/resort.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -277,7 +277,7 @@ nav a:hover{
 }
 
 #destinos-header{
-    background-image: url(/resources/fondo.jpg);
+    background-image: url(resources/fondo.jpg);
     background-blend-mode: darken;
     background-repeat: no-repeat;
     background-size: cover;
@@ -391,7 +391,7 @@ body{
 
 
 #paquetes-header{
-    background-image: url(/resources/fondo\ paquetes.jpg);
+    background-image: url(resources/fondo\ paquetes.jpg);
     height: 52rem;
     position: relative;
     background-size: cover;
@@ -490,7 +490,7 @@ position: relative;
 
 
 #nosotros-header{
-    background-image: url(/resources/fondo\ nosotros.jpg);
+    background-image: url(resources/fondo\ nosotros.jpg);
     height: 800px;
     background-size: cover;
     background-position: 0%;
@@ -593,7 +593,7 @@ text-shadow:
 
 }
 #contacto-body{
-    background-image: url(/resources/fondo-contacto.jpg);
+    background-image: url(resources/fondo-contacto.jpg);
     background-position: 0%;
     background-size: cover;
     backdrop-filter: blur(3px);
