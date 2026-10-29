@@ -15,6 +15,7 @@ a{
     height: fit-content;
     text-align: center;
     position: relative;
+    width: 100%;
 }
 nav {
     display: flex;
@@ -129,6 +130,7 @@ nav a:hover{
     color: white;color: color-mix(in srgb, #13b4f5 30%, black 40%);
 }
 #presentacion p{
+    min-width: 20em;
     padding-top: 50px;
     font-size: 120%;
 }
