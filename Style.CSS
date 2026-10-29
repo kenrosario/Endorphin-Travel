@@ -130,9 +130,7 @@ nav a:hover{
     color: white;color: color-mix(in srgb, #13b4f5 30%, black 40%);
 }
 #presentacion p{
-    min-width: 20em;
     padding-top: 50px;
-    font-size: 120%;
 }
 .carrusel {
     position: relative;
@@ -304,7 +302,7 @@ nav a:hover{
 #destinos-presentacion h2 {
     font-family: "Lobster", sans-serif;
     letter-spacing: 3px;
-    font-size: 180%;
+    font-size: 190%;
     font-weight: 100;
     font-style: normal;
     color: white;
@@ -313,18 +311,20 @@ nav a:hover{
 
 #destinos-inicio {
     display: flex;
-    min-height: min-content;
-    margin-top: 100px;
+    align-self: flex-end;
+    flex-wrap: wrap;
+    height: fit-content;
     flex-direction: row;
-    font-size: 23px;
+    font-size: 1.2em;
     width: 100%;
     justify-content: space-evenly;
-    
+    margin-top: 200px;
 }
 .di-diseño{
     flex-direction: column;
-    width: 100px;
+    width: 86px;
     border-radius: 40px;
+    height: 125px;
     color: white;
     background-color: rgba(0, 0, 0, 0.366);
     align-items: center;
@@ -543,7 +543,7 @@ position: relative;
  height: fit-content;
  justify-content: space-evenly;
  text-align: center;
- background-color: rgba(208, 211, 139, 0.692);
+ background-color: rgba(208, 211, 139, 0.452);
  padding-top: 100px;
  padding-bottom: 100px;
  mask: 
@@ -562,18 +562,20 @@ linear-gradient(to top, transparent 0%, black 8%, black 92%, transparent 100%);
         linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%);
     display: flex;
     justify-content: space-evenly;
-    background-color: rgb(193, 196, 118);
+    background-color: rgba(193, 196, 118, 0.359);
     padding-bottom: 50px;
     padding-top: 50px;
 }
 .valores{
     text-align: center;
+    font-size: 22px;
 }
 .fa-solid fa-hands-holding{
     height: 100px;
     width: 90px;
     font-size: 800px;
 }
+
 .valores h1{
     font-family: "tangerine", cursive;
     font-size: 45px;
@@ -598,7 +600,7 @@ text-shadow:
 }
 #contacto-body{
     background-image: url(resources/fondo-contacto.jpg);
-    background-position: 0%;
+    background-position: center;
     background-size: cover;
     backdrop-filter: blur(3px);
     text-align: center;
@@ -655,21 +657,26 @@ text-shadow:
 }
 
 @media (max-width: 768px) {
-    #opcionesnav {
-        display: none;
+#opcionesnav {
+        display: flex;
         flex-direction: column;
-        font-size: 14px;
-        padding-bottom: 10px;
+        gap: 20px;
+
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+
+        transition: max-height 0.9s ease, opacity 0.3s ease;
     }
 
     #opcionesnav.active {
-        display: flex;
-        background-color: #a5f0f3;
-        border-radius: 30px;
+        max-height: 500px;
+        opacity: 1;
     }
 
     .menu-nav {
         display: block;
+        cursor: pointer;
     }
     #viaje{
         margin-top: 0%;
