@@ -25,26 +25,14 @@ nav {
     justify-content: space-around;
     flex-wrap: nowrap;
     width: 100%;
-    overflow-x: scroll;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-
-}
-nav::-webkit-scrollbar{
-    display: none;
+    height: fit-content;
 }
 
 #logo{
-    height: 180px;
+    height: 10em;
 }
-#viaje{
-    width: 100px;
-    height: fit-content;
-    background-color: rgba(0, 0, 0, 0.416);
-    color: white;
-    width: 160px;
-    cursor: pointer;
-}
+
+
 
 
 #opcionesnav {
@@ -52,14 +40,14 @@ nav::-webkit-scrollbar{
     display: flex;
     justify-items: space-around;
     align-items: center;
-    font-size: 18px;
+    font-size: 1.1em;
     text-align: center;
     align-self: center;
     width: 200px;
     font-weight: 300;
     cursor: pointer;
     gap: 110px;
-    width: 850px;
+    width: 50%;
     text-decoration: none;
     color: black;
 
@@ -88,6 +76,14 @@ nav a:hover{
             rgba(255, 255, 255, 0) 75%);
 
     filter: blur(8px);
+}
+#viaje {
+    width: 100px;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.416);
+    color: white;
+    width: 160px;
+    cursor: pointer;
 }
 
 .logo {
@@ -118,9 +114,8 @@ nav a:hover{
 }
 .carrusel {
     position: relative;
-    width: 600px;
-    max-width: 800px;
-    margin: auto;
+    width: 40em;
+    margin: 0 auto;
     overflow: hidden;
 }
 .contenedor-imagenes {
@@ -635,4 +630,24 @@ text-shadow:
             1px -1px 0 #000000,
             -1px 1px 0 #000000,
             1px 1px 0 #000000;
+}
+
+.menu-nav {
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    #opcionesnav {
+        display: none;
+        flex-direction: column;
+    }
+
+    #opcionesnav.active {
+        display: flex;
+    }
+
+    .menu-nav {
+        display: block;
+    }
 }

@@ -3,8 +3,16 @@ const imagenes = document.querySelectorAll(".destino");
 
 const anterior = document.getElementById("anterior");
 const siguiente = document.getElementById("siguiente");
-
+const reservar = document.getElementById("viaje");
 let indiceActual = 0;
+
+const botonMenu = document.querySelector(".menu-nav");
+const opcionesNav = document.getElementById("opcionesnav");
+
+botonMenu.addEventListener("click", function () {
+    opcionesNav.classList.toggle("active");
+});
+
 
 function mostrarImagen(indice) {
     indiceActual = (indice + imagenes.length) % imagenes.length;
@@ -20,6 +28,7 @@ anterior.addEventListener("click", function () {
     mostrarImagen(indiceActual - 1);
 });
 
-document.getElementById("viaje").addEventListener("click", function () {
+reservar.addEventListener("click", function () {
     window.open("https://docs.google.com/forms/d/e/1FAIpQLSc2nLWuyj7HEzX77BX48jAdXji1Ds4ORRtCCg0sq1VKBN-zeg/viewform?usp=header", "_blank");
 });
+
