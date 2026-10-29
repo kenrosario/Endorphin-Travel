@@ -3,7 +3,8 @@ const imagenes = document.querySelectorAll(".destino");
 
 const anterior = document.getElementById("anterior");
 const siguiente = document.getElementById("siguiente");
-const reservar = document.getElementById("viaje");
+const reservar = document.getElementsByClassName(".viaje");
+
 let indiceActual = 0;
 
 const botonMenu = document.querySelector(".menu-nav");
@@ -31,4 +32,5 @@ anterior.addEventListener("click", function () {
 reservar.addEventListener("click", function () {
     window.open("https://docs.google.com/forms/d/e/1FAIpQLSc2nLWuyj7HEzX77BX48jAdXji1Ds4ORRtCCg0sq1VKBN-zeg/viewform?usp=header", "_blank");
 });
+
 
