@@ -135,7 +135,7 @@ nav a:hover{
 .carrusel {
     position: relative;
     max-width: 38em;
-    min-width: 25em;
+    min-width: 20em;
     margin: 0 auto;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -295,7 +295,7 @@ nav a:hover{
     
 }
 #destinos-intro{
-    margin-left: 70px;
+    text-align: center;
 }
 
 #destinos-presentacion h2 {
@@ -317,7 +317,7 @@ nav a:hover{
     font-size: 1.2em;
     width: 100%;
     justify-content: space-evenly;
-    margin-top: 200px;
+    margin-top: 150px;
 }
 .di-diseño{
     flex-direction: column;
@@ -327,6 +327,7 @@ nav a:hover{
     color: white;
     background-color: rgba(0, 0, 0, 0.366);
     align-items: center;
+    margin-bottom: 30px;
 }
 header h3 {
    font-size: 50px;
@@ -648,13 +649,15 @@ text-shadow:
 
 
 @media (max-width: 948px) {
-    #viaje {
+    .viaje {
         margin-top: 50px;
     }
 
     #nosotros-inicio{
         max-width: 30em;
     }
+
+
 }
 
 @media (max-width: 768px) {
@@ -662,7 +665,6 @@ text-shadow:
         display: flex;
         flex-direction: column;
         gap: 20px;
-
         max-height: 0;
         opacity: 0;
         overflow: hidden;
@@ -679,7 +681,19 @@ text-shadow:
         display: block;
         cursor: pointer;
     }
-    #viaje{
-        margin-top: 0%;
+    .viaje{
+        margin-top: 5%;
+        position: relative;
+            z-index: 10;
+            display: inline-block;
+            pointer-events: auto;
     }
+                .carrusel {
+                    align-content: center;
+                    margin-left: 20px;
+                    margin-right: 20px;
+                }
+
+         
 }
+
