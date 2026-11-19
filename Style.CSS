@@ -584,6 +584,10 @@ linear-gradient(to top, transparent 0%, black 8%, black 92%, transparent 100%);
     font-weight: 800;
 }
 
+.valores p{
+    font-size: 16px;
+}
+
 /*Estilo de pagina contacto ↓*/
 
 .contacto-inicio{
